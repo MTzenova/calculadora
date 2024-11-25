@@ -23,7 +23,7 @@ export default function App() {
       )}
       
      
-      
+      //fff
       
       <StatusBar style="auto" />
 
