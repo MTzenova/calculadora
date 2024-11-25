@@ -23,7 +23,7 @@ export const useCalculadora = () =>{
             setFormula(numero);
         }
         
-    }, [numero]);
+    }, [numero]); //lo he unido con número, es como el binding de móviles
 
     useEffect(() =>{
         const resultado = calcularResultado();
@@ -70,7 +70,7 @@ export const useCalculadora = () =>{
         setNumeroAnterior(numero);
         setNumero('0');
     }
-
+    //todo esto en un método
     const operacionDividir = () => {
         establecerUltimoNumero();
         UltimaOperacion.current = Operadores.dividir;
