@@ -1,19 +1,19 @@
-import { Pressable, Text } from "react-native";
+import { Pressable, Text, type TextProps } from "react-native";
 import { GlobalStyles } from "../theme/GlobalStyles";
-import { Color } from '../theme/Color';
 
 interface Props {
     label: string,
     width: number,
     onPress?: () => void;
-    
 }
 
-export const BotonOperacion = ({label, width, onPress}:Props) => {
+interface Props extends TextProps{color: 'darkBlue' | 'lightBlue'}
+
+export const BotonOperacion = ({label, width, onPress, color}:Props) => {
     return (
         <Pressable>
             <Text 
-                style={[GlobalStyles.boton, {width}, GlobalStyles.btnOperaciones]}
+                style={[GlobalStyles.boton, {width}, color==='darkBlue' ?GlobalStyles.btnOperaciones:null, color==='lightBlue' ?GlobalStyles.btnNumeros:null]}
                 onPress={onPress}>{label}</Text>
         </Pressable>
     )

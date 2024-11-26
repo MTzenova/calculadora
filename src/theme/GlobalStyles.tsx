@@ -43,6 +43,9 @@ const GlobalStyles = StyleSheet.create({
         fontSize: 70
     },
     btnOperaciones:{
+        backgroundColor:Color.darkBlue,
+    },
+    btnNumeros:{
         backgroundColor:Color.lightBlue,
     }
     
