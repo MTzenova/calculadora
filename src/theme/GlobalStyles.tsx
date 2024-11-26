@@ -5,11 +5,11 @@ export
 const GlobalStyles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: Color.white,
+        backgroundColor: Color.black,
         alignItems:  'center',
         justifyContent: 'flex-end',
         paddingBottom:20,
-        
+        color:Color.white,
     },
     fila: {
         flexDirection: 'row',
@@ -17,7 +17,7 @@ const GlobalStyles = StyleSheet.create({
         marginBottom:16,
         paddingHorizontal:10,
         width: '100%',
-        color:Color.white,
+        
     },
     boton: {
         width:80,
@@ -25,15 +25,25 @@ const GlobalStyles = StyleSheet.create({
         padding: 10,
         fontSize: 30,
         fontWeight: 300,
-        borderColor: 'black',
+        borderColor: Color.white,
         borderWidth: 2,
+        color:Color.white,
+        borderRadius:10
     },
     pantallaPrincipal: {
-        fontSize: 70,
         textAlign: 'right',
         fontWeight:400,
         width: '90%',
+        color:Color.white,
     },
-    
+    smallFont:{
+        fontSize: 30
+    },
+    bigFont:{
+        fontSize: 70
+    },
+    btnOperaciones:{
+        backgroundColor:Color.lightBlue,
+    }
     
 })
