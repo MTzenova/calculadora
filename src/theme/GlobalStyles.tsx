@@ -5,7 +5,7 @@ export
 const GlobalStyles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: Color.black,
+        backgroundColor: Color.background,
         alignItems:  'center',
         justifyContent: 'flex-end',
         paddingBottom:20,
@@ -25,16 +25,19 @@ const GlobalStyles = StyleSheet.create({
         padding: 10,
         fontSize: 30,
         fontWeight: 300,
-        borderColor: Color.white,
+        borderColor: Color.borderColor,
         borderWidth: 2,
         color:Color.white,
         borderRadius:10
     },
     pantallaPrincipal: {
+        backgroundColor:Color.pantalla,
         textAlign: 'right',
         fontWeight:400,
         width: '90%',
         color:Color.white,
+        borderRadius:15,
+        marginBottom:7,
     },
     smallFont:{
         fontSize: 30
@@ -43,10 +46,13 @@ const GlobalStyles = StyleSheet.create({
         fontSize: 70
     },
     btnOperaciones:{
-        backgroundColor:Color.darkBlue,
+        backgroundColor:Color.operaciones,
     },
     btnNumeros:{
-        backgroundColor:Color.lightBlue,
-    }
+        backgroundColor:Color.numeros,
+    },
+    btnSimbolos:{
+        backgroundColor:Color.simbolos
+    },
     
 })

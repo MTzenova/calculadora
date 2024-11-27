@@ -3,17 +3,17 @@ import { GlobalStyles } from "../theme/GlobalStyles";
 
 interface Props {
     label: string,
-    width: number,
+    width?: number,
     onPress?: () => void;
 }
 
-interface Props extends TextProps{color: 'darkBlue' | 'lightBlue'}
+interface Props extends TextProps{color: 'simbolos' | 'numeros' | 'operaciones'}
 
-export const BotonOperacion = ({label, width, onPress, color}:Props) => {
+export const BotonOperacion = ({label, width = 80, onPress, color}:Props) => {
     return (
         <Pressable>
             <Text 
-                style={[GlobalStyles.boton, {width}, color==='darkBlue' ?GlobalStyles.btnOperaciones:null, color==='lightBlue' ?GlobalStyles.btnNumeros:null]}
+                style={[GlobalStyles.boton, {width}, color==='simbolos' ?GlobalStyles.btnSimbolos:null, color==='numeros' ?GlobalStyles.btnNumeros:null, color==='operaciones' ?GlobalStyles.btnOperaciones:null]}
                 onPress={onPress}>{label}</Text>
         </Pressable>
     )
