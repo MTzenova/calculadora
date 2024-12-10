@@ -25,7 +25,7 @@ INSTRUCCIONES PARA EJECUTAR LA APLICACIÓN
 
 ## Imagen de la aplicación en uso:
 - Imagen 1: Calculadora sin hacer operaciones:
-![Calculadora sin hacer operaciones](/assets/calculadora.jpg)
+- ![Calculadora sin hacer operaciones](/assets/calculadora.jpg)
 
 - Imagen 2: Calculadora haciendo una suma:
-![Calculadora haciendo una suma](/assets/calculadora_suma.jpg)
+- ![Calculadora haciendo una suma](/assets/calculadora_suma.jpg)
