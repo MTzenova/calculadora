@@ -1,6 +1,6 @@
 import {useRef, useState, useEffect} from 'react';
 
-enum Operadores {
+enum OperadoresCalculadora {
     sumar = '+',
     restar = '-',
     multiplicar = '*',
@@ -71,25 +71,10 @@ export const useCalculadora = () =>{
         setNumero('0');
     }
     //todo esto en un método
-    const operacionDividir = () => {
-        establecerUltimoNumero();
-        UltimaOperacion.current = Operadores.dividir;
-    }
-
-    const operacionMultiplicar = () => {
-        establecerUltimoNumero();
-        UltimaOperacion.current = Operadores.multiplicar;
-    }
-
-    const operacionRestar = () => {
-        establecerUltimoNumero();
-        UltimaOperacion.current = Operadores.restar;
-    }
-
-    const operacionSumar = () => {
-        establecerUltimoNumero();
-        UltimaOperacion.current = Operadores.sumar;
-    }
+   const operaciones=(operacion : Operadores) =>{
+    establecerUltimoNumero();
+    UltimaOperacion.current = operacion;
+   }
 
     const calcularResultado = () => {
         const [primerValor, operacion, segundoValor] = formula.split(' ');
@@ -100,16 +85,16 @@ export const useCalculadora = () =>{
         if (isNaN(num2)) return num1;
 
         switch(operacion) {
-            case Operadores.sumar:
+            case OperadoresCalculadora.sumar:
                 return num1 + num2;
 
-            case Operadores.restar:
+            case OperadoresCalculadora.restar:
                 return num1 - num2;
 
-            case Operadores.multiplicar:
+            case OperadoresCalculadora.multiplicar:
                 return num1 * num2;
 
-            case Operadores.dividir:
+            case OperadoresCalculadora.dividir:
                 return num1 / num2;
 
             default:
@@ -152,16 +137,13 @@ export const useCalculadora = () =>{
 
     return {
         // Propiedades
-        formula, numero, numeroAnterior,
+        formula, numero, numeroAnterior, OperadoresCalculadora,
         //Metodos
         construirNumero,
         clean,
         cambiarSigno,
         borrarDigito,
-        operacionDividir,
-        operacionMultiplicar,
-        operacionRestar,
-        operacionSumar,
+        operaciones,
         calcularResultado,
         resultado
     }

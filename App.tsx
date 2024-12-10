@@ -8,7 +8,7 @@ import { GlobalStyles } from './src/theme/GlobalStyles';
 export default function App() {
 
   const {formula, numeroAnterior, construirNumero, clean, cambiarSigno, borrarDigito,
-         operacionDividir, operacionMultiplicar, operacionRestar, operacionSumar,resultado  } = useCalculadora();
+        operaciones, OperadoresCalculadora, resultado  } = useCalculadora();
 
   return (
   
@@ -30,25 +30,25 @@ export default function App() {
       <BotonOperacion label='C' onPress={clean} color='simbolos'></BotonOperacion>
       <BotonOperacion label='+/-' onPress={cambiarSigno} color='simbolos'></BotonOperacion>
       <BotonOperacion label='del' onPress={borrarDigito} color='simbolos'></BotonOperacion>
-      <BotonOperacion label='/' onPress={operacionDividir} color='operaciones'></BotonOperacion>
+      <BotonOperacion label='/' onPress={()=>operaciones(OperadoresCalculadora.dividir)} color='operaciones'></BotonOperacion>
     </View>
     <View style={GlobalStyles.fila}>
       <BotonOperacion label='7' onPress={() =>construirNumero('7')} color='numeros'></BotonOperacion>
       <BotonOperacion label='8' onPress={() =>construirNumero('8')} color='numeros'></BotonOperacion>
       <BotonOperacion label='9' onPress={() =>construirNumero('9')} color='numeros'></BotonOperacion>
-      <BotonOperacion label='x' onPress={operacionMultiplicar} color='operaciones'></BotonOperacion>
+      <BotonOperacion label='x' onPress={()=>operaciones(OperadoresCalculadora.multiplicar)} color='operaciones'></BotonOperacion>
     </View>
     <View style={GlobalStyles.fila}>
       <BotonOperacion label='4' onPress={() =>construirNumero('4')} color='numeros'></BotonOperacion>
       <BotonOperacion label='5' onPress={() =>construirNumero('5')} color='numeros'></BotonOperacion>
       <BotonOperacion label='6' onPress={() =>construirNumero('6')} color='numeros'></BotonOperacion>
-      <BotonOperacion label='-' onPress={operacionRestar} color='operaciones'></BotonOperacion>
+      <BotonOperacion label='-' onPress={()=>operaciones(OperadoresCalculadora.restar)} color='operaciones'></BotonOperacion>
     </View>
     <View style={GlobalStyles.fila}>
       <BotonOperacion label='1' onPress={() =>construirNumero('1')} color='numeros'></BotonOperacion>
       <BotonOperacion label='2' onPress={() =>construirNumero('2')} color='numeros'></BotonOperacion>
       <BotonOperacion label='3' onPress={() =>construirNumero('3')} color='numeros'></BotonOperacion>
-      <BotonOperacion label='+' onPress={operacionSumar} color='operaciones'></BotonOperacion>
+      <BotonOperacion label='+' onPress={()=>operaciones(OperadoresCalculadora.sumar)} color='operaciones'></BotonOperacion>
     </View>
     <View style={GlobalStyles.fila}>
       <BotonOperacion label='0' width={180} onPress={() =>construirNumero('0')} color='numeros'></BotonOperacion>
@@ -60,20 +60,3 @@ export default function App() {
 
   );
 }
-
-/*const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems:  'center',
-    justifyContent: 'flex-end',
-    paddingBottom:20,
-  },
-  fila: {
-    flexDirection: 'row',
-    justifyContent: "space-around",
-    marginBottom:16,
-    paddingHorizontal:10,
-    width: '100%',
-  }
-});*/

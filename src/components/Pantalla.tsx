@@ -10,12 +10,3 @@ export const Pantalla = ({children, tamanio, ...rest}:Props) => {
     </Text>
   )
 }
-
-/*const styles = StyleSheet.create({
-    pantallaPrincipal: {
-        fontSize: 70,
-        textAlign: 'right',
-        fontWeight:400,
-        width: '90%',
-    },
-  });*/
