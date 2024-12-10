@@ -23,9 +23,8 @@ INSTRUCCIONES PARA EJECUTAR LA APLICACIÓN
   - Después de eso, esribir en consola: npm run start
   - Por último esperar a que cargue y escanear el código QR con el móvil o pulsar la ```a``` (se inicia automáticamente en el móvil).
 
-## Imagen de la aplicación en uso:
-- Imagen 1: Calculadora sin hacer operaciones:
-- ![Calculadora sin hacer operaciones](/assets/calculadora.jpg)
+## Imagen 1 de la aplicación en uso: Calculadora sin hacer operaciones
+![Calculadora sin hacer operaciones](/assets/calculadora.jpg)
 
-- Imagen 2: Calculadora haciendo una suma:
-- ![Calculadora haciendo una suma](/assets/calculadora_suma.jpg)
+## Imagen 2: Calculadora haciendo una suma:
+![Calculadora haciendo una suma](/assets/calculadora_suma.jpg)
