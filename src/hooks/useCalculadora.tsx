@@ -95,6 +95,7 @@ export const useCalculadora = () =>{
                 return num1 * num2;
 
             case OperadoresCalculadora.dividir:
+                if(num2 === 0) return "Error, no se puede dividir entre 0."
                 return num1 / num2;
 
             default:
