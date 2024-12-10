@@ -20,7 +20,7 @@ INSTRUCCIONES PARA EJECUTAR LA APLICACIÓN
 
 3. En Visual Studio Code:
   - Escribir en consola: ```bash npm install```
-  - Después de eso, esribir en consola: npm run start
+  - Después de eso, esribir en consola: ```npm run start```
   - Por último esperar a que cargue y escanear el código QR con el móvil o pulsar la ```a``` (se inicia automáticamente en el móvil).
 
 ## Imagen 1 de la aplicación en uso: Calculadora sin hacer operaciones
