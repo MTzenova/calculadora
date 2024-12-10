@@ -16,11 +16,12 @@ INSTRUCCIONES PARA EJECUTAR LA APLICACIÓN
  
 2. Conectar el móvil al ordenador:
   - Conectar de forma inalámbrica: En la consola de comandos escribir ```adb pair```. Introducir dirección IP & Puerto y el código de vinculación.
-  - Para comprobar los dispositivos conectados escribir "adb devices".
+  - Para comprobar los dispositivos conectados escribir ```adb devices```.
 
 3. En Visual Studio Code:
-  - Escribir en consola: npm install
+  - Escribir en consola: ```bash npm install```
   - Después de eso, esribir en consola: npm run start
-  - Por último esperar a que cargue y escanear el código QR con el móvil o pulsar la "a" (se inicia automáticamente en el móvil).
+  - Por último esperar a que cargue y escanear el código QR con el móvil o pulsar la ```a``` (se inicia automáticamente en el móvil).
 
-Imagen de la aplicación en uso:
+## Imagen de la aplicación en uso:
+
