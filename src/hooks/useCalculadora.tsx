@@ -13,7 +13,7 @@ export const useCalculadora = () =>{
     const [numero, setNumero] = useState('0');
     const [numeroAnterior, setNumeroAnterior] = useState('0');
 
-    const UltimaOperacion = useRef<Operadores>();
+    const UltimaOperacion = useRef<OperadoresCalculadora>();
 
     useEffect(() => {
         if (UltimaOperacion.current) {
@@ -71,7 +71,7 @@ export const useCalculadora = () =>{
         setNumero('0');
     }
     //todo esto en un método
-   const operaciones=(operacion : Operadores) =>{
+   const operaciones=(operacion : OperadoresCalculadora) =>{
     establecerUltimoNumero();
     UltimaOperacion.current = operacion;
    }
